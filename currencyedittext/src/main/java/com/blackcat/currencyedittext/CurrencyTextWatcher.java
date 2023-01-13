@@ -49,7 +49,7 @@ class CurrencyTextWatcher implements TextWatcher {
                 editText.setRawValue(Long.valueOf(newText));
             }
             try{
-                textToDisplay = CurrencyTextFormatter.formatText(newText, editText.getLocale(), editText.getDefaultLocale(), editText.getDecimalDigits()).substring(3);
+                textToDisplay = CurrencyTextFormatter.formatText(newText, editText.getLocale(), editText.getDefaultLocale(), editText.getDecimalDigits());
             }
             catch(IllegalArgumentException exception){
                 textToDisplay = lastGoodInput;
